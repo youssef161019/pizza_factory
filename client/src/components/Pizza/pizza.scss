@@ -1,0 +1,76 @@
+.pizza_item {
+  width: 95%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(69, 69, 69);
+  flex-direction: column;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 2px 3px 3px -2px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  color: black;
+  z-index: 1;
+  font-size: 700;
+
+  &:hover {
+    background-color: white;
+  }
+  &-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-icon {
+    margin: 0 5px;
+    cursor: pointer;
+    color: rgba(68, 68, 68, 0.692);
+    &:hover {
+      color: black;
+      transition: 0.3s;
+    }
+  }
+}
+.pizza_item-control {
+  height: 100%;
+  min-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pizza_item-title {
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 800;
+}
+.pizza_item-toppingsList_sous {
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+.pizza_item-toppingsList {
+  width: 100%;
+}
+.pizza_item-topping {
+  padding-left: 5px;
+  text-transform: capitalize;
+  font-size: 0.8em;
+  font-weight: 800;
+  &::after {
+    content: " , ";
+  }
+  &:last-child {
+    &::after {
+      content: "";
+    }
+  }
+  &.non_available {
+  color: rgb(126, 126, 126);
+  &::after {
+    content: "(Removed)";
+    color: red;
+  }
+}
+}
+

@@ -1,0 +1,29 @@
+.error_page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cool_pizza{
+    height: 50vh;
+}
+.error_page_message{
+    font-size: 3rem;
+    color: red;
+}
+.error_page_message_s{
+    color: white;
+    font-size: 1.5rem;
+}
+.link_gs{
+    width: 100px;
+    color: white;
+    border: 1px solid white;
+    padding:5px 10px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+}

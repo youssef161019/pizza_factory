@@ -1,0 +1,28 @@
+{
+  "name": "strong-mind",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Youssef Jebali <youssefjebali4@gmail.com>",
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "start": "node --trace-warnings app.js",
+    "dev": "nodemon -L app.js"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.3",
+    "express": "~4.16.1",
+    "helmet": "^6.0.1",
+    "http-errors": "~1.6.3",
+    "ip": "^1.1.8",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.7.5",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,74 @@
+
+.topping_input-form {
+  width: 90%;
+  margin: 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topping_input {
+  &-title {
+    padding: 10px 0;
+    font-weight: 400;
+  }
+  &-label{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+  
+  }
+  &-input {
+    // width: 100%;
+    
+    flex: 1;
+    height: 25px;
+    margin-left: 5px;
+    background: none;
+    display: block;
+    padding: 5px;
+    text-align: center;
+    outline: none;
+    border-radius: 50px;
+    border: 1px solid#57575782;
+    &:focus {
+      border-color: black;
+    }
+  }
+  &-buttonsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+.topping_input-button {
+  height: 25px;
+  min-width: 80px;
+  margin: 5px;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  &Yes {
+    background-color: #4646facc;
+    &:hover {
+      background-color: #4646fa;
+      transition: background 0.3s;
+    }
+  }
+  &No {
+    background-color: #878787cc;
+
+    &:hover {
+      background-color: #767676;
+      transition: background 0.3s;
+    }
+  }
+}
+.topping_input-Error{
+  color: red;
+  font-size: 0.8rem;
+}

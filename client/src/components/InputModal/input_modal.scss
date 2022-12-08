@@ -1,0 +1,26 @@
+.input-overlay {
+  height: 100vh;
+  width: 100vw;
+  min-height: 650px;
+  min-width: 350px;
+  position: absolute;
+  background: #0d152182;
+  backdrop-filter: blur(5px);
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+.input-conatiner {
+  width: 90%;
+  max-height: 90vh;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

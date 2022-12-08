@@ -1,0 +1,58 @@
+.pizza_input {
+  &-title {
+    padding: 10px 0;
+    font-weight: 400;
+  }
+  &-form {
+    width: 100%;
+  }
+  &-list {
+    margin-top: 10px;
+  }
+  &-list,
+  &-field {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    // justify-content: flex-start;
+    font-size: 0.8rem;
+  }
+  &-list_empty {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+  }
+  &-label {
+    width: 80px;
+  }
+}
+.topping_input-message {
+  width: 100%;
+  font-size: 0.8rem;
+}
+.error_message {
+  color: red;
+  margin: 5px 0;
+}
+.toppings_list-conatiner {
+  max-height: min(60vh, 500px);
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  border: 1px solid gray;
+  border-radius: 8px;
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 5px;
+  margin: 5px 0;
+}
+.name_input_error {
+  border-color: red;
+}
+.required_field::before {
+  content: "*";
+  color: red;
+}

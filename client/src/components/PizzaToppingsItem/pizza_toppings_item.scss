@@ -1,0 +1,55 @@
+
+.toppings_list-item{
+    width: 100%;
+    height:30px;
+    border:1px solid gray;
+    margin-bottom: 5px;
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+
+}
+
+
+.check-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    width: 30px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+input:checked[type="checkbox"] {
+    background: #7dffaf;
+}
+
+input[type="checkbox"]::after {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    top: -2px;
+    left: 0;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: 0.4s;
+}
+
+input:checked[type="checkbox"]::after {
+    left: 60%;
+}
+}
+
+
