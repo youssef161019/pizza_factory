@@ -37,17 +37,23 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(compression());
-app.use(cors(corsOptions));
+app.use(cors());
+// app.use(cors(corsOptions));
 
-app.use(express.static(path.join(__dirname, "public")));
+
+app.use(express.static(path.resolve(__dirname, "client/build")));
 
 app.use("/api/toppings", toppingsRouter);
 app.use("/api/pizza", pizzaRouter);
 
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404));
+app.get("*", function (request, response) {
+  response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
 });
+
+// catch 404 and forward to error handler
+// app.use(function (req, res, next) {
+//   next(createError(404));
+// });
 
 // error handler
 app.use(function (err, req, res, next) {
@@ -56,8 +62,12 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500).send({ error: err.message, code: err.status });
 });
 
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 5000;
 let isProd = process.env.NODE_ENV === "production";
+
+
+
+
 connectDB();
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));

@@ -1,5 +1,5 @@
 {
-  "name": "strong-mind",
+  "name": "strong-minds",
   "version": "0.0.1",
   "private": true,
   "author": "Youssef Jebali <youssefjebali4@gmail.com>",
@@ -8,7 +8,10 @@
   },
   "scripts": {
     "start": "node --trace-warnings app.js",
-    "dev": "nodemon -L app.js"
+    "dev": "nodemon -L app.js",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "install-app":"npm install && cd client && npm install"
   },
   "dependencies": {
     "compression": "^1.7.4",

@@ -1,4 +1,10 @@
 /node_modules
 /.pnp
 .pnp.js
+.gitignore
+
 .env
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
