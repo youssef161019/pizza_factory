@@ -8,7 +8,10 @@
   },
   "scripts": {
     "start": "node --trace-warnings app.js",
-    "dev": "nodemon -L app.js"
+    "dev": "nodemon -L app.js",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "install-app":"npm install && cd client && npm install"
   },
   "dependencies": {
     "compression": "^1.7.4",

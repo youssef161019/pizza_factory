@@ -37,17 +37,23 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(compression());
-app.use(cors(corsOptions));
+app.use(cors());
+// app.use(cors(corsOptions));
 
-app.use(express.static(path.join(__dirname, "public")));
+
+app.use(express.static(path.resolve(__dirname, "client/build")));
 
 app.use("/api/toppings", toppingsRouter);
 app.use("/api/pizza", pizzaRouter);
 
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404));
+app.get("*", function (request, response) {
+  response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
 });
+
+// catch 404 and forward to error handler
+// app.use(function (req, res, next) {
+//   next(createError(404));
+// });
 
 // error handler
 app.use(function (err, req, res, next) {
